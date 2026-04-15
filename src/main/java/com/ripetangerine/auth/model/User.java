@@ -1,13 +1,16 @@
 package com.ripetangerine.auth.model;
 
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Entity
 public class User {
-    Long id;
-    String username;
-    String password;
+    @Id @GeneratedValue
+    private Long id;
+    private String username;
+    private String password;
 }
